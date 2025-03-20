@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/colorAccent"
+    tools:context=".Activities.SplashActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/chat_logo_animation"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/splash_animation"
+        app:lottie_repeatCount="2" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/no_internet_connection"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/no_internet_animation"
+        app:lottie_repeatCount="100" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_logo_animation"
+        android:layout_centerHorizontal="true"
+        android:text="LET'S CHAT"
+        android:textColor="@color/colorPrimary"
+        android:textSize="26sp"
+        android:fontFamily="@font/amaranth_bold"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/chat_logo_animation"
+        app:layout_constraintStart_toStartOf="@+id/chat_logo_animation"
+        app:layout_constraintTop_toBottomOf="@+id/chat_logo_animation" />
+
+    <Button
+        android:id="@+id/refresh_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/buttons"
+        android:padding="10dp"
+        android:text="Refresh"
+        android:textAllCaps="false"
+        android:fontFamily="@font/acme"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/no_internet_connection"
+        app:layout_constraintStart_toStartOf="@+id/no_internet_connection"
+        app:layout_constraintTop_toBottomOf="@+id/no_internet_connection" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
